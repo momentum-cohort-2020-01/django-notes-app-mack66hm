@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+    <thead>
+        <tr><th> MY NOTES
+
+        </th>
+        </tr>
+    </thead>
+<tbody> 
+    {% for note in notes.values %}
+    <tr><td>{{note.title}}</td><td>{{note.details}}</td></tr>
+    {% endfor %}
+
+</body>
+</table>
+
+
+
+{% endblock %}
+
+
+<!-- <a href="{% url 'notes-detail' 1 %}"></a> -->
