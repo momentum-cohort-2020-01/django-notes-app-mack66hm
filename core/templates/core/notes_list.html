@@ -9,15 +9,17 @@
     </thead>
 <tbody> 
     {% for note in notes %}
-    <tr><td>{{note.title}}</td><td>{{note.details}}</td></tr>
+    <tr><td><a href="{% url 'notes-detail' note.pk %}">{{note.title}}</a></td><td>{{note.body}}</td></tr>
     {% endfor %}
 
-</body>
+</tbody>
 </table>
+
 
 
 
 {% endblock %}
 
 
-<!-- <a href="{% url 'notes-detail' 1 %}"></a> -->
+
+<!-- <a href="{% url 'notes_detail' note.pk %}"></a> -->
