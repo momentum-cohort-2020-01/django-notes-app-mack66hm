@@ -2,7 +2,8 @@
 {% block content %}
 <dl><dt>{{note.title}}</dt><dd>{{note.body}}</dd></dl>
 
-<a class = 'button' href="{% url 'notes-edit' pk=note.pk %}"></a>
+<a class = 'button' href="{% url 'notes-edit' pk=note.pk %}">Edit</a>
+<a class = 'button button-danger' href="{% url 'notes-delete' pk=note.pk %}">Delete</a>
 
 <footer>
     <p>Created at: {{note.created_at}}</p>
